@@ -2,9 +2,11 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/vladislavtomenko/remindlater-bot)](https://goreportcard.com/report/github.com/vladislavtomenko/remindlater-bot)
 [![Build Status](https://travis-ci.org/vladislavtomenko/remindlater-bot.svg?branch=master)](https://travis-ci.org/vladislavtomenko/remindlater-bot)
-![license](https://img.shields.io/github/license/mashape/apistatus.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 This telegram bot strives to implement missing reminder functionality in the messenger. You can run your own bot or use [@remindlater_bot](https://telegram.me/remindlater_bot).
+
+<img src="img/bot.jpg" width="30%">
 
 # Features
 

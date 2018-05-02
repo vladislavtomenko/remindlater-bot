@@ -1,5 +1,6 @@
 # remindlater-bot
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/vladislavtomenko/remindlater-bot)](https://goreportcard.com/report/github.com/vladislavtomenko/remindlater-bot)
 [![Build Status](https://travis-ci.org/vladislavtomenko/remindlater-bot.svg?branch=master)](https://travis-ci.org/vladislavtomenko/remindlater-bot)
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg)
 

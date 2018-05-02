@@ -28,7 +28,7 @@ Name | Description | Default
 --------- | ----------- | -------
 `DEBUG` | Log debug message to stdout | `false`
 `DURATION` | Default reminder delay in seconds | `20`
-`TOKEN` | Telegram bot API token | ``
+`TOKEN` | Telegram bot API token | 
 
 Run the bot
 ```bash

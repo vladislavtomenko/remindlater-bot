@@ -45,7 +45,15 @@ func CallbackProcessor(callback tgbotapi.CallbackQuery, reminders *[]*Reminder, 
 
 	bot.Send(edit)
 
+	var reminderIndex int
+	for i, reminder := range *reminders {
+		if reminder.Message.MessageID == callback.Message.ReplyToMessage.MessageID {
+			reminderIndex = i
+		}
+	}
+
 	if callback.Data == "Complete" {
+		*reminders = append((*reminders)[:reminderIndex], (*reminders)[reminderIndex+1:]...)
 		return
 	}
 
@@ -63,12 +71,8 @@ func CallbackProcessor(callback tgbotapi.CallbackQuery, reminders *[]*Reminder, 
 		newRemindTime += 86400
 	}
 
-	for _, reminder := range *reminders {
-		if reminder.Message.MessageID == callback.Message.ReplyToMessage.MessageID {
-			reminder.RemindTime = newRemindTime
-			reminder.IsSent = false
-		}
-	}
+	(*reminders)[reminderIndex].RemindTime = newRemindTime
+	(*reminders)[reminderIndex].IsSent = false
 
 }
 

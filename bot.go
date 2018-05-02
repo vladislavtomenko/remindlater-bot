@@ -151,17 +151,17 @@ func main() {
 	for update := range updates {
 
 		if update.CallbackQuery != nil {
-			CallbackProcessor(*(update).CallbackQuery, &remindersList, bot)
-		}
-
-		if update.Message.Text == "/start" {
-			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Hi! Just write me or forward a message and I'll remind you about it in 20 minutes. \u23F0")
-			bot.Send(msg)
+			CallbackProcessor(*update.CallbackQuery, &remindersList, bot)
 			continue
 		}
 
 		if update.Message == nil {
 			continue
+		}
+
+		if update.Message.Text == "/start" {
+			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Hi! Just write me or forward a message and I'll remind you about it in 20 minutes. \u23F0")
+			bot.Send(msg)
 		}
 
 		log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)

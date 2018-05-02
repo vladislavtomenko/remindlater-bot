@@ -162,6 +162,7 @@ func main() {
 		if update.Message.Text == "/start" {
 			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Hi! Just write me or forward a message and I'll remind you about it in 20 minutes. \u23F0")
 			bot.Send(msg)
+			continue
 		}
 
 		log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)

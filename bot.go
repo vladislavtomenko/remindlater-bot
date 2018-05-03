@@ -66,7 +66,7 @@ func CallbackProcessor(callback tgbotapi.CallbackQuery, reminders *[]*Reminder, 
 	case "hour1":
 		newRemindTime += 3600
 	case "hour3":
-		newRemindTime += 3600
+		newRemindTime += 10800
 	case "day1":
 		newRemindTime += 86400
 	}

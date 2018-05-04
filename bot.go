@@ -22,11 +22,6 @@ func (reminder Reminder) IsTimeToProcess() bool {
 	return reminder.RemindTime <= int(time.Now().Unix())
 }
 
-type ReminderResponse struct {
-	Reminder *Reminder
-	Message  *tgbotapi.Message
-}
-
 // Config is the bot configuration.
 //
 // Token is a telegram bot API token,

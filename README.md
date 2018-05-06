@@ -21,8 +21,8 @@ Clone the repo and and compile the project
 ```bash
 git clone https://github.com/vladislavtomenko/remindlater-bot.git
 cd reminder-bot
-go get
-go install
+go get -d -v ./...
+go install -v ./...
 ```
 
 Set the environment variables

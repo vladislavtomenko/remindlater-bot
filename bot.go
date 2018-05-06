@@ -17,7 +17,7 @@ type Reminder struct {
 	RemindTime int
 }
 
-// Check if it's time to send the reminder.
+// IsTimeToProcess checks if it's time to send the reminder.
 func (reminder Reminder) IsTimeToProcess() bool {
 	return reminder.RemindTime <= int(time.Now().Unix())
 }

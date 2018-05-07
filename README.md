@@ -37,3 +37,9 @@ Run the bot
 ```bash
 DEBUG=true DURATION=1200 TOKEN=xxxxxx $GOBIN/remindlater-bot
 ```
+
+Also you can run it in docker
+```bash
+docker build -t remindlater .
+docker run -d  -e "DEBUG=true" -e "DURATION=1200" -e "TOKEN=xxxxxx" remindlater
+```

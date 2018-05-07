@@ -21,8 +21,8 @@ Clone the repo and and compile the project
 ```bash
 git clone https://github.com/vladislavtomenko/remindlater-bot.git
 cd reminder-bot
-go get
-go install
+go get -d -v ./...
+go install -v ./...
 ```
 
 Set the environment variables
@@ -36,4 +36,10 @@ Name | Description | Default
 Run the bot
 ```bash
 DEBUG=true DURATION=1200 TOKEN=xxxxxx $GOBIN/remindlater-bot
+```
+
+Also you can run it in docker
+```bash
+docker build -t remindlater .
+docker run -d  -e "DEBUG=true" -e "DURATION=1200" -e "TOKEN=xxxxxx" remindlater
 ```
